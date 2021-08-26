@@ -53,9 +53,11 @@ OBJECTS_DIR   = ./
 ####### Files
 
 SOURCES       = ../Trabajo-Extra-Clase_1/PagedArray.cpp \
-		../Trabajo-Extra-Clase_1/main.cpp 
+		../Trabajo-Extra-Clase_1/main.cpp \
+		../Trabajo-Extra-Clase_1/selection_sort.cpp 
 OBJECTS       = PagedArray.o \
-		main.o
+		main.o \
+		selection_sort.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/unix.conf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/common/linux.conf \
@@ -130,8 +132,10 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		../Trabajo-Extra-Clase_1/Trabajo-Extra-Clase_1.pro ../Trabajo-Extra-Clase_1/PagedArray.h ../Trabajo-Extra-Clase_1/PagedArray.cpp \
-		../Trabajo-Extra-Clase_1/main.cpp
+		../Trabajo-Extra-Clase_1/Trabajo-Extra-Clase_1.pro ../Trabajo-Extra-Clase_1/PagedArray.h \
+		../Trabajo-Extra-Clase_1/selection_sort.h ../Trabajo-Extra-Clase_1/PagedArray.cpp \
+		../Trabajo-Extra-Clase_1/main.cpp \
+		../Trabajo-Extra-Clase_1/selection_sort.cpp
 QMAKE_TARGET  = Trabajo-Extra-Clase_1
 DESTDIR       = 
 TARGET        = Trabajo-Extra-Clase_1
@@ -309,8 +313,8 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../Trabajo-Extra-Clase_1/PagedArray.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../Trabajo-Extra-Clase_1/PagedArray.cpp ../Trabajo-Extra-Clase_1/main.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../Trabajo-Extra-Clase_1/PagedArray.h ../Trabajo-Extra-Clase_1/selection_sort.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../Trabajo-Extra-Clase_1/PagedArray.cpp ../Trabajo-Extra-Clase_1/main.cpp ../Trabajo-Extra-Clase_1/selection_sort.cpp $(DISTDIR)/
 
 
 clean: compiler_clean 
@@ -363,6 +367,9 @@ PagedArray.o: ../Trabajo-Extra-Clase_1/PagedArray.cpp ../Trabajo-Extra-Clase_1/P
 
 main.o: ../Trabajo-Extra-Clase_1/main.cpp ../Trabajo-Extra-Clase_1/PagedArray.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ../Trabajo-Extra-Clase_1/main.cpp
+
+selection_sort.o: ../Trabajo-Extra-Clase_1/selection_sort.cpp ../Trabajo-Extra-Clase_1/selection_sort.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o selection_sort.o ../Trabajo-Extra-Clase_1/selection_sort.cpp
 
 ####### Install
 
