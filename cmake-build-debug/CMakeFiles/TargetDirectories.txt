@@ -1,3 +1,0 @@
-/home/bigolman20/Documentos/GitHub/Tarea-Extra-Clase-1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/bigolman20/Documentos/GitHub/Tarea-Extra-Clase-1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/bigolman20/Documentos/GitHub/Tarea-Extra-Clase-1/cmake-build-debug/CMakeFiles/Tarea_Extra_Clase_1.dir
