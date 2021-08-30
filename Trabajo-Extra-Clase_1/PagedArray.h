@@ -3,7 +3,8 @@
 #include "QString"
 #include "string"
 
-//Archivo de cabecera o header de PagedArray
+/*Archivo de cabecera o header de PagedArray
+*/
 class PagedArray{
 public:
     PagedArray();

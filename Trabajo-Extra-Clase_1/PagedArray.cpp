@@ -3,15 +3,16 @@
 #include "PagedArray.h"
 #include "QDebug"
 #include "QString"
-//Sobrecarga el operador PagedArray se encargará de buscar la página correspondiente solicitada
-
+/*Sobrecarga el operador PagedArray se encargará de buscar la página correspondiente solicitada
+*/
 
 using namespace std;
 
 PagedArray::PagedArray() {
 
 }
-//Carga o habre el archivo txt para realizar su respectiva lectura y los obtine como enteros
+/*Carga o habre el archivo txt para realizar su respectiva lectura y los obtine como enteros
+*/
 void PagedArray::load(QString rute) {
     ifstream file;
     file.open(rute.toStdString());
@@ -29,7 +30,8 @@ void PagedArray::load(QString rute) {
         qDebug()<<b<<" "<<*b;
     }
 }
-//Obtine  la cantidad necesaria de numeros, sin sobrepasar el limite de la computadora
+/*Obtine  la cantidad necesaria de numeros, sin sobrepasar el limite de la computadora
+*/
 QStringList PagedArray::get_numbers(QStringList numeros)
 {
     qDebug()<<numeros.size();
