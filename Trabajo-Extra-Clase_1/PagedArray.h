@@ -1,8 +1,9 @@
 #ifndef PAGEDARRAY_H
 #define PAGEDARRAY_H
-
 #include "QString"
 #include "string"
+
+//Archivo de cabecera o header de PagedArray
 class PagedArray{
 public:
     PagedArray();

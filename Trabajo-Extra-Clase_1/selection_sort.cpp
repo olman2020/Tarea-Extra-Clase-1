@@ -1,6 +1,7 @@
 #include "selection_sort.h"
 #include "bits/stdc++.h"
 using namespace std;
+//Implementacion de algoritmo de ordenamiento Selection Sort
 Selection_Sort::Selection_Sort()
 {
 
@@ -17,17 +18,17 @@ void Selection_Sort::selectionSort(int arr[], int n)
 {
     int i, j, min_idx;
 
-    // One by one move boundary of unsorted subarray
+    // Limite de movimiento uno por uno del array sin ordenar
     for (i = 0; i < n-1; i++)
     {
-        // Find the minimum element in unsorted array
+        // Encuentra el elemento mínimo en el array sin clasificar
         min_idx = i;
         for (j = i+1; j < n; j++) {
             if (arr[j] < arr[min_idx]) {
                 min_idx = j;
             }
         }
-        // Swap the found minimum element with the first element
+        // Intercambia el elemento mínimo encontrado con el primer elemento
         swap(&arr[min_idx], &arr[i]);
     }
 }
