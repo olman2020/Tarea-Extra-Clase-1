@@ -1,7 +1,7 @@
 #ifndef SELECTION_SORT_H
 #define SELECTION_SORT_H
 
-/*Archivo de cabecera o header de SelectionSort
+/** Archivo de cabecera o header de SelectionSort
 */
 class Selection_Sort
 {
